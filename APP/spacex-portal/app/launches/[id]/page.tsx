@@ -12,9 +12,11 @@ interface LaunchDetailPageProps {
 
 export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
   const [launchId, setLaunchId] = useState<string | null>(null)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
     params.then(({ id }) => setLaunchId(id))
+    setIsClient(true)
   }, [params])
 
   const { loading, error, data } = useQuery<LaunchData>(GET_LAUNCH_BY_ID, {
@@ -175,7 +177,7 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
               <div>
                 <span className="font-medium text-gray-400 text-sm sm:text-base">Upcoming:</span>
                 <p className="text-gray-300 text-sm sm:text-base">
-                  {new Date(launch.launch_date_utc) > new Date() ? 'Yes' : 'No'}
+                  {isClient ? (new Date(launch.launch_date_utc) > new Date() ? 'Yes' : 'No') : 'Loading...'}
                 </p>
               </div>
             </div>
