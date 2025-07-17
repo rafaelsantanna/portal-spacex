@@ -12,10 +12,10 @@
 - [x] Inicializar shadcn/ui
 - [x] Testar componente Button na página inicial
 
-### Fase 3 – Apollo Client
-- [ ] Configurar Apollo Client com endpoint SpaceX
-- [ ] Criar queries GraphQL para launches
-- [ ] Verificar conexão com API
+### ✅ Fase 3 – Apollo Client
+- [x] Configurar Apollo Client com endpoint SpaceX
+- [x] Criar queries GraphQL para launches
+- [x] Verificar conexão com API
 
 ### Fase 4 – Layout & Navegação
 - [ ] Criar layout com Header/Footer
