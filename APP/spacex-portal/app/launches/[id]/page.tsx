@@ -160,38 +160,26 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
             </div>
           </div>
 
-          {/* Payloads */}
-          {launch.payloads && launch.payloads.length > 0 && (
-            <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-              <h2 className="text-2xl font-bold text-blue-400 mb-4">Payloads</h2>
-              <div className="space-y-4">
-                {launch.payloads.map((payload, index) => (
-                  <div key={payload.payload_id} className="border-b border-white/10 pb-3 last:border-b-0">
-                    <div className="grid grid-cols-2 gap-2 text-sm">
-                      <div>
-                        <span className="font-medium text-gray-400">ID:</span>
-                        <p className="text-gray-300">{payload.payload_id}</p>
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-400">Type:</span>
-                        <p className="text-gray-300">{payload.payload_type}</p>
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-400">Mass:</span>
-                        <p className="text-gray-300">
-                          {payload.payload_mass_kg ? `${payload.payload_mass_kg} kg` : 'Unknown'}
-                        </p>
-                      </div>
-                      <div>
-                        <span className="font-medium text-gray-400">Orbit:</span>
-                        <p className="text-gray-300">{payload.orbit}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+          {/* Additional Details */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+            <h2 className="text-2xl font-bold text-blue-400 mb-4">Additional Information</h2>
+            <div className="space-y-3">
+              <div>
+                <span className="font-medium text-gray-400">Launch Year:</span>
+                <p className="text-gray-300">{new Date(launch.launch_date_utc).getFullYear()}</p>
+              </div>
+              <div>
+                <span className="font-medium text-gray-400">Mission ID:</span>
+                <p className="text-gray-300">{launch.id}</p>
+              </div>
+              <div>
+                <span className="font-medium text-gray-400">Upcoming:</span>
+                <p className="text-gray-300">
+                  {new Date(launch.launch_date_utc) > new Date() ? 'Yes' : 'No'}
+                </p>
               </div>
             </div>
-          )}
+          </div>
         </div>
 
         {/* Image Gallery */}

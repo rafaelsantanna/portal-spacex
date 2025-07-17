@@ -50,12 +50,6 @@ export const GET_LAUNCH_BY_ID = gql`
       launch_site {
         site_name_long
       }
-      payloads {
-        payload_id
-        payload_type
-        payload_mass_kg
-        orbit
-      }
     }
   }
 `

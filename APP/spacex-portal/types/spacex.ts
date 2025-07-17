@@ -19,12 +19,6 @@ export interface Launch {
   launch_site: {
     site_name_long: string
   }
-  payloads?: {
-    payload_id: string
-    payload_type: string
-    payload_mass_kg: number | null
-    orbit: string
-  }[]
 }
 
 export interface Rocket {
