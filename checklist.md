@@ -17,9 +17,9 @@
 - [x] Criar queries GraphQL para launches
 - [x] Verificar conexão com API
 
-### Fase 4 – Layout & Navegação
-- [ ] Criar layout com Header/Footer
-- [ ] Implementar landing page com SSR
+### ✅ Fase 4 – Layout & Navegação
+- [x] Criar layout com Header/Footer
+- [x] Implementar landing page com SSR
 
 ### Fase 5 – Catálogo
 - [ ] Criar página de launches com CSR
