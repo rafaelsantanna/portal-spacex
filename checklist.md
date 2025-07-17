@@ -21,10 +21,10 @@
 - [x] Criar layout com Header/Footer
 - [x] Implementar landing page com SSR
 
-### Fase 5 – Catálogo
-- [ ] Criar página de launches com CSR
-- [ ] Implementar infinite scroll
-- [ ] Criar componente LaunchCard
+### ✅ Fase 5 – Catálogo
+- [x] Criar página de launches com CSR
+- [x] Implementar infinite scroll
+- [x] Criar componente LaunchCard
 
 ### Fase 6 – Detalhes
 - [ ] Criar página de detalhes do launch
