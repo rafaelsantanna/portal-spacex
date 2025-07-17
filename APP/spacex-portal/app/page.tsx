@@ -1,57 +1,47 @@
+import { Button } from "@/components/ui/button"
+
 export default function Home() {
   return (
-    <div className="bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4 py-8">
-        <section className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Welcome to SpaceX Portal
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-black text-white">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center space-y-8">
+          <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            SpaceX Launch Portal
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            Track and explore SpaceX launches, missions, and rocket data
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            Explore the history of SpaceX launches and stay updated with the latest missions
           </p>
-        </section>
-
-        <section className="max-w-6xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Explore SpaceX
-            </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-8">
-              This portal provides real-time information about SpaceX launches,
-              missions, and rocket data sourced from the official SpaceX API.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  🚀 Upcoming Launches
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  View scheduled launches and mission details
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  📡 Past Missions
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Explore historical launch data and outcomes
-                </p>
-              </div>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg hover:shadow-md transition-shadow">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                  🛸 Rocket Fleet
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Learn about SpaceX rockets and capabilities
-                </p>
-              </div>
-            </div>
+          
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              View Launches
+            </Button>
+            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+              Latest Mission
+            </Button>
           </div>
-        </section>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+            <h3 className="text-xl font-semibold mb-2">Total Launches</h3>
+            <p className="text-3xl font-bold text-blue-400">200+</p>
+            <p className="text-gray-400 mt-2">Successful missions completed</p>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+            <h3 className="text-xl font-semibold mb-2">Reusable Rockets</h3>
+            <p className="text-3xl font-bold text-green-400">90%</p>
+            <p className="text-gray-400 mt-2">Landing success rate</p>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+            <h3 className="text-xl font-semibold mb-2">Next Launch</h3>
+            <p className="text-3xl font-bold text-purple-400">Soon</p>
+            <p className="text-gray-400 mt-2">Stay tuned for updates</p>
+          </div>
+        </div>
       </div>
     </div>
-  );
+  )
 }

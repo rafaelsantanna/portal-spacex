@@ -3,14 +3,14 @@
 ## Roadmap
 
 ### ✅ Fase 1 – Bootstrap
-- [ ] Criar projeto Next.js 14 com TypeScript e ESLint
-- [ ] Verificar se servidor dev está funcionando
-- [ ] Adicionar checklist.md ao .gitignore
+- [x] Criar projeto Next.js 14 com TypeScript e ESLint
+- [x] Verificar se servidor dev está funcionando
+- [x] Adicionar checklist.md ao .gitignore
 
-### Fase 2 – Tailwind v4 + shadcn/ui
-- [ ] Instalar e configurar Tailwind CSS v4
-- [ ] Inicializar shadcn/ui
-- [ ] Testar componente Button na página inicial
+### ✅ Fase 2 – Tailwind v4 + shadcn/ui
+- [x] Instalar e configurar Tailwind CSS v4
+- [x] Inicializar shadcn/ui
+- [x] Testar componente Button na página inicial
 
 ### Fase 3 – Apollo Client
 - [ ] Configurar Apollo Client com endpoint SpaceX
