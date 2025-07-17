@@ -27,9 +27,9 @@
 - [x] Criar componente LaunchCard
 
 ### Fase 6 – Detalhes
-- [ ] Criar página de detalhes do launch
-- [ ] Implementar galeria de imagens
-- [ ] Adicionar links externos
+- [x] Criar página de detalhes do launch
+- [x] Implementar galeria de imagens
+- [x] Adicionar links externos
 
 ### Fase 7 – Responsividade
 - [ ] Ajustar layout para mobile
