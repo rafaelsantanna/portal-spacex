@@ -96,9 +96,9 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-black text-white">
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <Button 
             onClick={() => window.history.back()} 
             variant="outline"
@@ -107,13 +107,13 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
             ← Back to Launches
           </Button>
           
-          <div className="flex items-start justify-between mb-6">
-            <div className="flex-1">
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+          <div className="flex flex-col sm:flex-row items-start justify-between gap-4 mb-6">
+            <div className="flex-1 text-center sm:text-left">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
                 {launch.mission_name}
               </h1>
-              <p className="text-xl text-gray-300 mb-2">{formatDate}</p>
-              <p className="text-lg">
+              <p className="text-lg sm:text-xl text-gray-300 mb-2">{formatDate}</p>
+              <p className="text-base sm:text-lg">
                 <span className="font-medium text-gray-400">Status:</span>{' '}
                 <span className={`font-medium ${
                   launch.launch_success === null 
@@ -131,50 +131,50 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
               <img 
                 src={launch.links.mission_patch} 
                 alt={`${launch.mission_name} patch`}
-                className="w-32 h-32 object-contain"
+                className="w-24 h-24 sm:w-32 sm:h-32 object-contain mx-auto sm:mx-0 flex-shrink-0"
               />
             )}
           </div>
         </div>
 
         {/* Launch Details Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8">
           {/* Mission Details */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <h2 className="text-2xl font-bold text-blue-400 mb-4">Mission Details</h2>
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-4">Mission Details</h2>
             <div className="space-y-3">
               <div>
-                <span className="font-medium text-gray-400">Rocket:</span>
-                <p className="text-gray-300">{launch.rocket.rocket_name} ({launch.rocket.rocket_type})</p>
+                <span className="font-medium text-gray-400 text-sm sm:text-base">Rocket:</span>
+                <p className="text-gray-300 text-sm sm:text-base">{launch.rocket.rocket_name} ({launch.rocket.rocket_type})</p>
               </div>
               <div>
-                <span className="font-medium text-gray-400">Launch Site:</span>
-                <p className="text-gray-300">{launch.launch_site?.site_name_long || 'Unknown'}</p>
+                <span className="font-medium text-gray-400 text-sm sm:text-base">Launch Site:</span>
+                <p className="text-gray-300 text-sm sm:text-base break-words">{launch.launch_site?.site_name_long || 'Unknown'}</p>
               </div>
               {launch.details && (
                 <div>
-                  <span className="font-medium text-gray-400">Description:</span>
-                  <p className="text-gray-300 mt-1">{launch.details}</p>
+                  <span className="font-medium text-gray-400 text-sm sm:text-base">Description:</span>
+                  <p className="text-gray-300 mt-1 text-sm sm:text-base">{launch.details}</p>
                 </div>
               )}
             </div>
           </div>
 
           {/* Additional Details */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <h2 className="text-2xl font-bold text-blue-400 mb-4">Additional Information</h2>
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-4">Additional Information</h2>
             <div className="space-y-3">
               <div>
-                <span className="font-medium text-gray-400">Launch Year:</span>
-                <p className="text-gray-300">{new Date(launch.launch_date_utc).getFullYear()}</p>
+                <span className="font-medium text-gray-400 text-sm sm:text-base">Launch Year:</span>
+                <p className="text-gray-300 text-sm sm:text-base">{new Date(launch.launch_date_utc).getFullYear()}</p>
               </div>
               <div>
-                <span className="font-medium text-gray-400">Mission ID:</span>
-                <p className="text-gray-300">{launch.id}</p>
+                <span className="font-medium text-gray-400 text-sm sm:text-base">Mission ID:</span>
+                <p className="text-gray-300 text-sm sm:text-base break-all">{launch.id}</p>
               </div>
               <div>
-                <span className="font-medium text-gray-400">Upcoming:</span>
-                <p className="text-gray-300">
+                <span className="font-medium text-gray-400 text-sm sm:text-base">Upcoming:</span>
+                <p className="text-gray-300 text-sm sm:text-base">
                   {new Date(launch.launch_date_utc) > new Date() ? 'Yes' : 'No'}
                 </p>
               </div>
@@ -184,9 +184,9 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
 
         {/* Image Gallery */}
         {launch.links.flickr_images && launch.links.flickr_images.length > 0 && (
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 mb-8">
-            <h2 className="text-2xl font-bold text-blue-400 mb-4">Image Gallery</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 mb-6 sm:mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-4">Image Gallery</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
               {launch.links.flickr_images.map((image, index) => (
                 <div
                   key={image}
@@ -196,7 +196,7 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
                   <img
                     src={image}
                     alt={`${launch.mission_name} image ${index + 1}`}
-                    className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                    className="w-full h-32 sm:h-40 lg:h-48 object-cover transition-transform group-hover:scale-105"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
@@ -213,9 +213,9 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
         )}
 
         {/* External Links */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-          <h2 className="text-2xl font-bold text-blue-400 mb-4">External Links</h2>
-          <div className="flex flex-wrap gap-4">
+        <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10">
+          <h2 className="text-xl sm:text-2xl font-bold text-blue-400 mb-4">External Links</h2>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
             {launch.links.video_link && (
               <a 
                 href={launch.links.video_link} 
@@ -223,12 +223,13 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
-                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800">
+                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full sm:w-auto justify-center sm:justify-start">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                     <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
                   </svg>
-                  Watch Launch Video
+                  <span className="hidden sm:inline">Watch Launch Video</span>
+                  <span className="sm:hidden">Watch Video</span>
                 </Button>
               </a>
             )}
@@ -240,7 +241,7 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
-                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800">
+                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full sm:w-auto justify-center sm:justify-start">
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
@@ -256,7 +257,7 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
               >
-                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800">
+                <Button variant="outline" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full sm:w-auto justify-center sm:justify-start">
                   <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"/>
                   </svg>
@@ -273,10 +274,10 @@ export default function LaunchDetailPage({ params }: LaunchDetailPageProps) {
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative max-w-4xl max-h-full">
+            <div className="relative max-w-full sm:max-w-4xl max-h-full mx-4">
               <button
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 text-white hover:text-gray-300 z-10 bg-black/50 rounded-full p-1 sm:p-2"
               >
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

@@ -113,17 +113,17 @@ export default function LaunchesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-black text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="mb-12">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+        <div className="mb-8 sm:mb-12 text-center sm:text-left">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
             SpaceX Launches
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-300">
             Explore the complete history of SpaceX launches
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {launches.map((launch) => (
             <LaunchCard key={launch.id} launch={launch} />
           ))}

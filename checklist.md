@@ -31,9 +31,9 @@
 - [x] Implementar galeria de imagens
 - [x] Adicionar links externos
 
-### Fase 7 – Responsividade
-- [ ] Ajustar layout para mobile
-- [ ] Otimizar containers e grid
+### ✅ Fase 7 – Responsividade
+- [x] Ajustar layout para mobile
+- [x] Otimizar containers e grid
 
 ### Fase 8 – Testes
 - [ ] Configurar Vitest para testes unitários
