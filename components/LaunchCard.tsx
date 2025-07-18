@@ -15,7 +15,7 @@ export default function LaunchCard({ launch }: LaunchCardProps) {
   })
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] group h-full flex flex-col">
+    <div data-testid="launch-card" className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] group h-full flex flex-col">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1 min-w-0">
           <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors line-clamp-2">

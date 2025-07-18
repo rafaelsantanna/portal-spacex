@@ -35,8 +35,8 @@
 - [x] Ajustar layout para mobile
 - [x] Otimizar containers e grid
 
-### Fase 8 – Testes
-- [ ] Configurar Vitest para testes unitários
-- [ ] Criar teste para LaunchCard
-- [ ] Configurar Cypress para E2E
-- [ ] Criar teste de navegação scroll → detalhe
+### ✅ Fase 8 – Testes
+- [x] Configurar Vitest para testes unitários
+- [x] Criar teste para LaunchCard
+- [x] Configurar Cypress para E2E
+- [x] Criar teste de navegação scroll → detalhe
