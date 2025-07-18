@@ -66,3 +66,51 @@
     color: hsl(var(--foreground));
   }
 }
+
+@layer utilities {
+  /* Melhorias de UX e acessibilidade */
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  /* Scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Focus visível para acessibilidade */
+  .focus-visible {
+    @apply ring-2 ring-blue-400/50 outline-none;
+  }
+  
+  /* Hover states melhorados */
+  .hover-lift {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Animações suaves para elementos interativos */
+  .interactive {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  /* Melhoria do line-clamp para melhor legibilidade */
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.4;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.4;
+  }
+}

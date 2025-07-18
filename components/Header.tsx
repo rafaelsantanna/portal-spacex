@@ -8,11 +8,11 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-800 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-800/50 bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-slate-900/95 backdrop-blur supports-[backdrop-filter]:bg-gradient-to-r supports-[backdrop-filter]:from-slate-900/60 supports-[backdrop-filter]:via-blue-900/60 supports-[backdrop-filter]:to-slate-900/60">
       <div className="container mx-auto px-4 flex h-16 items-center">
         <div className="flex items-center justify-between w-full">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               SpaceX Portal
             </span>
           </Link>
@@ -21,23 +21,23 @@ export default function Header() {
           <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             <Link 
               href="/launches" 
-              className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base"
+              className="text-gray-300 hover:text-blue-400 transition-all duration-200 text-sm lg:text-base hover:scale-105"
             >
               Launches
             </Link>
             <Link 
               href="/rockets" 
-              className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base"
+              className="text-gray-300 hover:text-blue-400 transition-all duration-200 text-sm lg:text-base hover:scale-105"
             >
               Rockets
             </Link>
             <Link 
               href="/company" 
-              className="text-gray-300 hover:text-white transition-colors text-sm lg:text-base"
+              className="text-gray-300 hover:text-blue-400 transition-all duration-200 text-sm lg:text-base hover:scale-105"
             >
               Company
             </Link>
-            <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 hidden lg:flex">
+            <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200 hidden lg:flex">
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 0H6v10h8V5z"/>
               </svg>
@@ -48,7 +48,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-300 hover:text-white"
+            className="md:hidden p-2 rounded-md text-gray-300 hover:text-blue-400 transition-all duration-200 hover:bg-white/10"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,31 +64,31 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden border-t border-gray-800 bg-black/95 backdrop-blur">
+        <div className="md:hidden border-t border-gray-800/50 bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-slate-900/95 backdrop-blur">
           <nav className="container mx-auto px-4 py-4 space-y-3">
             <Link 
               href="/launches" 
-              className="block text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-gray-300 hover:text-blue-400 transition-all duration-200 py-2 hover:pl-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Launches
             </Link>
             <Link 
               href="/rockets" 
-              className="block text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-gray-300 hover:text-blue-400 transition-all duration-200 py-2 hover:pl-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Rockets
             </Link>
             <Link 
               href="/company" 
-              className="block text-gray-300 hover:text-white transition-colors py-2"
+              className="block text-gray-300 hover:text-blue-400 transition-all duration-200 py-2 hover:pl-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Company
             </Link>
             <div className="pt-2">
-              <Button variant="outline" size="sm" className="w-full border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800">
+              <Button variant="outline" size="sm" className="w-full border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 0H6v10h8V5z"/>
                 </svg>

@@ -56,13 +56,13 @@ export default async function Home() {
           
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Link href="/launches">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-blue-500/25 w-full sm:w-auto">
                 View Launches
               </Button>
             </Link>
             {latestLaunch && (
               <Link href={`/launches/${latestLaunch.id}`}>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 hover:scale-105 transition-all duration-200 hover:border-blue-400 w-full sm:w-auto">
                   <span className="hidden sm:inline">Latest Mission: </span>
                   {latestLaunch.mission_name}
                 </Button>
@@ -72,13 +72,13 @@ export default async function Home() {
         </div>
 
         <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4">
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-blue-400/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-semibold mb-2">Total Launches</h3>
             <p className="text-2xl sm:text-3xl font-bold text-blue-400">{stats?.total || '200'}+</p>
             <p className="text-gray-400 mt-2 text-sm sm:text-base">Missions to date</p>
           </div>
           
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-blue-400/30 hover:bg-white/10 transition-all duration-300 hover:scale-105 cursor-pointer">
             <h3 className="text-lg sm:text-xl font-semibold mb-2">Success Rate</h3>
             <p className="text-2xl sm:text-3xl font-bold text-green-400">{stats?.successRate || '95'}%</p>
             <p className="text-gray-400 mt-2 text-sm sm:text-base">Mission success rate</p>
@@ -127,7 +127,7 @@ export default async function Home() {
                   </p>
                 )}
                 <Link href={`/launches/${latestLaunch.id}`}>
-                  <Button variant="outline" size="sm" className="mt-4">
+                  <Button variant="outline" size="sm" className="mt-4 hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200">
                     View Details →
                   </Button>
                 </Link>

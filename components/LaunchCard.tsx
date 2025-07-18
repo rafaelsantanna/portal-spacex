@@ -15,7 +15,7 @@ export default function LaunchCard({ launch }: LaunchCardProps) {
   })
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-white/20 transition-all hover:shadow-xl hover:shadow-blue-500/10 group h-full flex flex-col">
+    <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/10 hover:border-blue-400/30 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20 hover:scale-[1.02] group h-full flex flex-col">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1 min-w-0">
           <h3 className="text-lg sm:text-xl font-semibold text-white group-hover:text-blue-400 transition-colors line-clamp-2">
@@ -62,7 +62,7 @@ export default function LaunchCard({ launch }: LaunchCardProps) {
 
       <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 mt-auto">
         <Link href={`/launches/${launch.id}`} className="flex-1">
-          <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full">
+          <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200 w-full">
             View Details
           </Button>
         </Link>
@@ -75,7 +75,7 @@ export default function LaunchCard({ launch }: LaunchCardProps) {
               rel="noopener noreferrer"
               className="flex-1 sm:flex-initial"
             >
-              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full sm:w-auto">
+              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200 w-full sm:w-auto">
                 <svg className="w-4 h-4 sm:mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                   <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
@@ -92,7 +92,7 @@ export default function LaunchCard({ launch }: LaunchCardProps) {
               rel="noopener noreferrer"
               className="flex-1 sm:flex-initial"
             >
-              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-gray-800 w-full sm:w-auto">
+              <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200 w-full sm:w-auto">
                 <svg className="w-4 h-4 sm:mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
