@@ -7,7 +7,6 @@ A modern web application built with Next.js 14, TypeScript, and Tailwind CSS to 
 - 🚀 Real-time SpaceX launch tracking
 - 📡 Historical mission data
 - 🛸 Rocket fleet information
-- 🌙 Dark mode support
 - 📱 Responsive design
 - ⚡ Fast performance with Next.js 14
 
