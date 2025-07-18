@@ -25,24 +25,14 @@ export default function Header() {
             >
               Launches
             </Link>
-            <Link 
-              href="/rockets" 
+            <a 
+              href="https://www.spacex.com" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-300 hover:text-blue-400 transition-all duration-200 text-sm lg:text-base hover:scale-105"
             >
-              Rockets
-            </Link>
-            <Link 
-              href="/company" 
-              className="text-gray-300 hover:text-blue-400 transition-all duration-200 text-sm lg:text-base hover:scale-105"
-            >
-              Company
-            </Link>
-            <Button variant="outline" size="sm" className="border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200 hidden lg:flex">
-              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 0H6v10h8V5z"/>
-              </svg>
-              Mission Control
-            </Button>
+              SpaceX Official
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -73,28 +63,15 @@ export default function Header() {
             >
               Launches
             </Link>
-            <Link 
-              href="/rockets" 
+            <a 
+              href="https://www.spacex.com" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-gray-300 hover:text-blue-400 transition-all duration-200 py-2 hover:pl-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Rockets
-            </Link>
-            <Link 
-              href="/company" 
-              className="block text-gray-300 hover:text-blue-400 transition-all duration-200 py-2 hover:pl-2"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Company
-            </Link>
-            <div className="pt-2">
-              <Button variant="outline" size="sm" className="w-full border-gray-700 text-gray-300 hover:text-white hover:bg-blue-600/20 hover:border-blue-400 transition-all duration-200">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M3 5a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 0H6v10h8V5z"/>
-                </svg>
-                Mission Control
-              </Button>
-            </div>
+              SpaceX Official
+            </a>
           </nav>
         </div>
       )}
