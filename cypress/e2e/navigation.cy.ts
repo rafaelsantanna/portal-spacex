@@ -71,13 +71,13 @@ describe('SpaceX Portal - Navigation', () => {
       
       // Click mobile menu button
       cy.get('button[aria-label="Toggle menu"]').click()
-      
-      // Check if mobile menu is open
-      cy.contains('Launches').should('be.visible')
-      
-      // Click on Launches in mobile menu
-      cy.contains('Launches').click()
     })
+    
+    // Wait for mobile menu to appear outside of header scope
+    cy.contains('Launches').should('be.visible')
+    
+    // Click on Launches in mobile menu
+    cy.contains('Launches').click()
     
     // Should navigate to launches page
     cy.url().should('include', '/launches')
